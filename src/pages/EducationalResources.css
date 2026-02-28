@@ -1,0 +1,232 @@
+/* Educational Resources Styles */
+
+.resources-page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+}
+
+.resources-header {
+    background: linear-gradient(135deg, var(--accent-teal) 0%, var(--primary-600) 100%);
+    padding: 1rem 2rem;
+    color: white;
+}
+
+.resources-header .header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resources-header .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.resources-header .logo-icon {
+    font-size: 1.5rem;
+}
+
+.resources-header h1 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: white;
+}
+
+.resources-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.page-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Categories Grid */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.category-section {
+    background: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.category-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(135deg, var(--accent-teal) 0%, var(--primary-600) 100%);
+    padding: 1rem 1.5rem;
+}
+
+.resources-list {
+    padding: 1rem;
+}
+
+.resource-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.resource-item:hover {
+    background: var(--gray-50);
+}
+
+.resource-item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.resource-icon {
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.resource-info {
+    flex: 1;
+}
+
+.resource-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.resource-info p {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.resource-meta {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+}
+
+.resource-type {
+    background: var(--primary-50);
+    color: var(--accent-teal);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+}
+
+.resource-duration {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+}
+
+.resource-action {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-100);
+    border: none;
+    border-radius: 50%;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.resource-action:hover {
+    background: var(--accent-teal);
+    color: white;
+}
+
+/* Help Section */
+.help-section {
+    margin-top: 2rem;
+}
+
+.help-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary-50) 0%, #e0f2fe 100%);
+    border: 1px solid var(--accent-teal);
+    border-radius: var(--border-radius-lg);
+}
+
+.help-icon {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.help-content {
+    flex: 1;
+}
+
+.help-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.help-content p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .help-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .resource-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resource-action {
+        align-self: flex-end;
+    }
+}
